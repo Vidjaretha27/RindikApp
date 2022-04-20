@@ -293,8 +293,6 @@
                 android:layout_gravity="center"
                 android:text="Stop"/>
         </LinearLayout>
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -69,7 +69,7 @@ class OnlyAudioRecorder private constructor() {
     }
 
     private fun writeDateTOFile(){
-        var audioData = ByteArray(bufferSizeInByte)
+        val audioData = ByteArray(bufferSizeInByte)
         println("audioData     " + audioRecorder!!.read(audioData, 0, bufferSizeInByte).toString())
         val file = File(PCMPath)
         if (!file.parentFile.exists()) {
@@ -93,8 +93,8 @@ class OnlyAudioRecorder private constructor() {
     }
 
     private fun copyWaveFile(pcmPath:String, wavPath:String){
-        var fileIn = FileInputStream(pcmPath)
-        var fileOut = FileOutputStream(wavPath)
+        val fileIn = FileInputStream(pcmPath)
+        val fileOut = FileOutputStream(wavPath)
         val data = ByteArray(bufferSizeInByte)
         val totalAudioLen = fileIn.channel.size()
         val totalDataLen = totalAudioLen+36
